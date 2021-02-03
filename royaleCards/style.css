@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background: lightgray;
+}
+
+.cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: scale(0.97);
+    height: 40vh;
+}
+
+.card img {
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.card:hover h1 {
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.card h1 {
+    font-size: 1.5rem;
+    transform: translateX(-3rem);
+    transition: all 0.5s;
+    height: 25vh;
+    writing-mode: vertical-lr;
+    visibility: hidden;
+    text-align: center;
+    color: #1d1d1d;
+}
+
+.card.normal {
+    order: 1;
+}
+
+.card.rare {
+    order: 2;
+}
+
+.card.epic {
+    order: 3;
+}
+
+.card.legendary {
+    order: 4;
+}
